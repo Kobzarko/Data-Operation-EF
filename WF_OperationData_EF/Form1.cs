@@ -107,7 +107,7 @@ namespace WF_OperationData_EF
             {
                 int index = dataGridView1.SelectedRows[0].Index;
                 int id = 0;
-
+                // 
                 bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
                 if (converted == false)
                     return;
