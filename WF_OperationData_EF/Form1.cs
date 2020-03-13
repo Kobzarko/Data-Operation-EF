@@ -15,7 +15,7 @@ namespace WF_OperationData_EF
     {
 
         SoccerContext db;
-        int playersCnt;
+        private int playersCnt;
       
 
         public Form1()
@@ -36,6 +36,8 @@ namespace WF_OperationData_EF
         {
 
         }
+
+        #region добавление
         // добавление
         private void button1_Click(object sender, EventArgs e)
         {
@@ -63,7 +65,11 @@ namespace WF_OperationData_EF
             MessageBox.Show(" Новый объект добавлен");
            
         }
-         // редактирование
+
+        #endregion
+
+        #region редактирование
+        // редактирование
         private void button2_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count>0)
@@ -99,6 +105,9 @@ namespace WF_OperationData_EF
                 MessageBox.Show("Объект обновлен");
             }
         }
+        #endregion
+
+        #region удаление
         // удаление
         private void button3_Click(object sender, EventArgs e)
         {
@@ -120,5 +129,7 @@ namespace WF_OperationData_EF
                 MessageBox.Show("Запись была удалена");
             }
         }
+
+        #endregion
     }
 }
